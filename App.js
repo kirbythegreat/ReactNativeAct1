@@ -5,10 +5,12 @@ import { styles } from "./src/styles/MainStyle";
 const App = () => {
   const [username, setUsername] = useState("");
   const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
 
   const handlePress = () => {
-    setUsername("Enzo");
-    setFirstName("Ferrari");
+    setUsername("Ferrari");
+    setFirstName("Lewis");
+    setLastName("Hamillton");
   };
 
   return (
@@ -25,7 +27,7 @@ const App = () => {
           source={require("./src/assets/ferrariLogo.png")}
         />
 
-      <Text style={styles.textStyle}>Hello, {username} {firstName}!</Text>
+      <Text style={styles.textStyle}>Hello {firstName} {lastName}, Welcome to {username}!</Text>
 
       <TextInput
         value={username}
@@ -40,6 +42,13 @@ const App = () => {
         style={styles.TextInput}
         placeholder="Enter First Name"
       />
+
+      <TextInput
+        value={firstName}
+        onChangeText={setLastName}
+        style={styles.TextInput}
+        placeholder="Enter Last Name"
+      />  
 
       <TouchableOpacity onPress={handlePress} style={styles.button}>
         <Image

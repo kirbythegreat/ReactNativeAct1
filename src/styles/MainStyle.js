@@ -42,8 +42,9 @@ export const styles = StyleSheet.create({
     textStyle:{
         color: 'white',
         fontFamily: 'roboto',
-        fontSize: 24,
+        fontSize: 18,
         fontWeight: 'bold',
-        marginBottom: 20
+        marginBottom: 20,
+        marginTop: 24
     }
 })
